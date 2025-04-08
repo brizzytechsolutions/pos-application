@@ -5,6 +5,7 @@ import swagger, { SwaggerOptions } from '@fastify/swagger'; // Import SwaggerOpt
 import swaggerUI from '@fastify/swagger-ui';
 import fastifyJwt from '@fastify/jwt';
 import authRoutes from './routes/authRoute';
+import taskRoutes from './routes/taskRoutes';
 
 dotenv.config();
 
@@ -48,6 +49,7 @@ app.decorate('authenticate', async (request: any, reply: any) => {
 });
 
 app.register(authRoutes, { prefix: '/auth' });
+app.register(taskRoutes, { prefix: '/tasks' });
 
 const start = async () => {
   try {
