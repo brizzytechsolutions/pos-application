@@ -18,7 +18,6 @@ export const createTaskSchema = {
   response: {
     201: {
       type: 'object'
-      // Define response properties if desired
     }
   }
 };
