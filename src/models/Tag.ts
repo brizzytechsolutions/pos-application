@@ -1,20 +1,19 @@
-// src/models/tag.ts
-import { DataTypes, Model } from 'sequelize'
-import { sequelize } from '../db/databaseConfig'
+import { Model, DataTypes } from 'sequelize';
+import { sequelize } from '../db/databaseConfig';
 
 class Tag extends Model {
-  public id!: number
-  public name!: string
+  declare id: number;
+  declare label: string;
 }
 
 Tag.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       autoIncrement: true,
-      primaryKey: true
     },
-    name: {
+    label: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
@@ -22,8 +21,9 @@ Tag.init(
   },
   {
     sequelize,
-    modelName: 'tag'
+    modelName: 'Tag',
+    timestamps: true
   }
-)
+);
 
 export default Tag;

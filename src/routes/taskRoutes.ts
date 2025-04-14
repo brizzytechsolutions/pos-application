@@ -1,4 +1,3 @@
-// src/routes/taskRoutes.ts
 import { FastifyInstance } from 'fastify';
 import { createTask, getTasks, getTaskById, updateTask, deleteTask } from '../controllers/taskController';
 import { createTaskSchema, getTasksSchema, getTaskSchema, updateTaskSchema, deleteTaskSchema } from '../schemas/taskSchemas';

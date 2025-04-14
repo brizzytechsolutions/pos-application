@@ -1,12 +1,8 @@
-
-// Database configuration using Sequelize and PostgreSQL
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
 dotenv.config();
 
-// Create Sequelize instance
 const sequelize = new Sequelize(
   process.env.DB_NAME || 'database_name',
   process.env.DB_USER || 'user',
@@ -25,7 +21,6 @@ const sequelize = new Sequelize(
   }
 );
 
-// Test database connection
 const testConnection = async () => {
   try {
     await sequelize.authenticate();
