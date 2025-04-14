@@ -1,5 +1,5 @@
 {
-  "name": "pos-application",
+  "name": "task-application",
   "version": "1.0.0",
   "description": "Point-of-Sale Application",
   "main": "src/app.ts",
